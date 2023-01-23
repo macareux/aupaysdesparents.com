@@ -608,33 +608,34 @@
                     <div class="contact-form text-center">
                         <h4 class="contact-title">Envoyer un message</h4>
                         <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="form-row">
-                                <div class="control-group col-sm-6">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Votre nom"
-                                        required="required" data-validation-required-message="Votre nom" />
+                        <form id="fs-frm" name="contact-form" accept-charset="utf-8" action="https://formspree.io/f/xpzewnok" method="post" novalidate="novalidate">
+                            <fieldset id="fs-frm-inputs">
+                                <div class="form-row">
+                                    <div class="control-group col-sm-6">
+                                        <input type="text" class="form-control p-4" id="name" name="name" placeholder="Votre nom"
+                                            required="required" data-validation-required-message="Votre nom" />
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="control-group col-sm-6">
+                                        <input type="email" class="form-control p-4" id="email" name="_replyto" placeholder="Votre mail"
+                                            required="required" data-validation-required-message="Votre email" />
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <input type="text" class="form-control p-4" id="subject" name="objet" placeholder="Objet du message"
+                                        required="required" data-validation-required-message="Objet du message" />
                                     <p class="help-block text-danger"></p>
                                 </div>
-                                <div class="control-group col-sm-6">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Votre mail"
-                                        required="required" data-validation-required-message="Votre email" />
+                                <div class="control-group">
+                                    <textarea class="form-control py-3 px-4" rows="5" id="message" name="message" placeholder="Message"
+                                        required="required" data-validation-required-message="Envoyer un message"></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" placeholder="Votre message"
-                                    required="required" data-validation-required-message="Entrer votre message" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
-                                    required="required"
-                                    data-validation-required-message="Envoyer un message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                           <div class="form-group ">
-                                 <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Envoyer un
-                                 message</button>
+                            </fieldset>
+                            <div class="form-group ">
+                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Envoyer un
+                                message</button>
                             </div>
                         </form>
                     </div>
